@@ -6,27 +6,212 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/kadencja/ix/ranking</loc>
+    <loc>https://poznan.radoskop.pl/profil/adam-szabelak/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/agnieszka-lewandowska/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/arkadiusz-marchewka/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/bartosz-zawieja/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/beata-urbanska/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/dominika-gorna/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/dorota-bonk-hammermeister/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/ewa-jemielity/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/filip-olszak/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/grzegorz-ganowicz/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/halina-owsianna/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/jedrzej-solarski/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/joanna-jaskowiak/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/lidia-dudziak/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/lukasz-kapustka/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/lukasz-mikula/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/maciej-wituski/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/marek-sternalski/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/marek-wozniak/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/mariusz-wisniewski/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/marzena-wodzinska/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/mikolaj-wilk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/natalia-konfederak/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/pawel-sowa/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/przemyslaw-alexandrowicz/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/rafal-grupinski/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/roger-russel/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/szymon-szynkowski-vel-sek/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/tomasz-kacprzak/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/tomasz-lewandowski/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/zdzislaw-szkutnik/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/zuzanna-chojnacka/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/kadencja/viii/ranking/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/kadencja/ix/radni</loc>
+    <loc>https://poznan.radoskop.pl/kadencja/viii/radni/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/kadencja/ix/sesje</loc>
+    <loc>https://poznan.radoskop.pl/kadencja/viii/sesje/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/kadencja/ix/glosowania</loc>
+    <loc>https://poznan.radoskop.pl/kadencja/viii/glosowania/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/kadencja/ix/podobienstwo</loc>
+    <loc>https://poznan.radoskop.pl/kadencja/viii/podobienstwo/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/kadencja/ix/ranking/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/kadencja/ix/radni/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/kadencja/ix/sesje/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/kadencja/ix/glosowania/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/kadencja/ix/podobienstwo/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -145,8 +145,11 @@ def scrape_session_list() -> list[dict]:
     """Fetch the session list page and extract all sessions.
 
     BIP Poznań format varies — we try several patterns:
-      - "Sesja Rady Miasta Poznania nr XI dnia 21 listopada 2024"
-      - Links with Roman numeral and date in text or href
+      1. eSesja: "XXXII (zwyczajna ...) 2026-03-17 09:00"
+      2. "nr XI dnia 21 listopada 2024"
+      3. href slug: "nr-xi-dnia-21-listopada-2024"
+      4. compact: "Sesja nr XI - 21.11.2024"
+      5. fallback: Roman numeral + ISO date anywhere in text
     """
     soup = fetch(SESSIONS_URL)
     sessions = []
@@ -164,14 +167,41 @@ def scrape_session_list() -> list[dict]:
         for a in page_soup.find_all("a", href=True):
             text = a.get_text(strip=True)
 
-            # Try matching text pattern with Roman numeral + date
-            m = re.search(
-                r'nr\s+([IVXLCDM]+)\s+dnia\s+(\d{1,2})\s+(\w+)\s+(\d{4})',
-                text,
-                re.IGNORECASE
+            number = None
+            date = None
+
+            # Pattern 1: BIP Poznań eSesja format
+            # "XXXII (zwyczajna ...) 2026-03-17 09:00"
+            # or just "XXXII 2026-03-17 09:00"
+            m_esesja = re.search(
+                r'^([IVXLCDM]+)\s*(?:\(.*?\)\s*)?(\d{4})-(\d{2})-(\d{2})',
+                text
             )
-            if not m:
-                # Try matching from href slug
+            if m_esesja:
+                number = m_esesja.group(1).upper()
+                year = int(m_esesja.group(2))
+                month = int(m_esesja.group(3))
+                day = int(m_esesja.group(4))
+                date = f"{year}-{month:02d}-{day:02d}"
+
+            # Pattern 2: "nr XI dnia 21 listopada 2024"
+            if not number:
+                m = re.search(
+                    r'nr\s+([IVXLCDM]+)\s+dnia\s+(\d{1,2})\s+(\w+)\s+(\d{4})',
+                    text,
+                    re.IGNORECASE
+                )
+                if m:
+                    number = m.group(1).upper()
+                    day = int(m.group(2))
+                    month_name = m.group(3).lower()
+                    year = int(m.group(4))
+                    month_num = MONTHS_PL.get(month_name)
+                    if month_num:
+                        date = f"{year}-{month_num:02d}-{day:02d}"
+
+            # Pattern 3: href slug "nr-xi-dnia-21-listopada-2024"
+            if not number:
                 href_text = a["href"].split("/")[-1] if "/" in a["href"] else ""
                 m_href = re.search(
                     r'nr-([ivxlcdm]+)-dnia-(\d{1,2})-(\w+)-(\d{4})',
@@ -183,30 +213,31 @@ def scrape_session_list() -> list[dict]:
                     day = int(m_href.group(2))
                     month_name = m_href.group(3).lower()
                     year = int(m_href.group(4))
-                else:
-                    # Also try: "Sesja nr XI - 21.11.2024" or similar compact format
-                    m2 = re.search(r'(?:sesj[ai]|nr)\s*\.?\s*([IVXLCDM]+)\s*[-–]\s*(\d{1,2})\.(\d{1,2})\.(\d{4})', text, re.IGNORECASE)
-                    if m2:
-                        number = m2.group(1).upper()
-                        day = int(m2.group(2))
-                        month = int(m2.group(3))
-                        year = int(m2.group(4))
-                        date = f"{year}-{month:02d}-{day:02d}"
-                        href = a["href"]
-                        if not href.startswith("http"):
-                            href = urljoin(BIP_BASE, href)
-                        sessions.append({"number": number, "date": date, "url": href})
-                    continue
-            else:
-                number = m.group(1).upper()
-                day = int(m.group(2))
-                month_name = m.group(3).lower()
-                year = int(m.group(4))
+                    month_num = MONTHS_PL.get(month_name)
+                    if month_num:
+                        date = f"{year}-{month_num:02d}-{day:02d}"
 
-            month = MONTHS_PL.get(month_name)
-            if not month:
+            # Pattern 4: "Sesja nr XI - 21.11.2024"
+            if not number:
+                m2 = re.search(r'(?:sesj[ai]|nr)\s*\.?\s*([IVXLCDM]+)\s*[-–]\s*(\d{1,2})\.(\d{1,2})\.(\d{4})', text, re.IGNORECASE)
+                if m2:
+                    number = m2.group(1).upper()
+                    day = int(m2.group(2))
+                    month = int(m2.group(3))
+                    year = int(m2.group(4))
+                    date = f"{year}-{month:02d}-{day:02d}"
+
+            # Pattern 5: ISO date anywhere with Roman numeral anywhere
+            # e.g. text contains "XXXII" and "2026-03-17"
+            if not number:
+                m_roman = re.search(r'\b([IVXLCDM]{2,})\b', text)
+                m_iso = re.search(r'(\d{4})-(\d{2})-(\d{2})', text)
+                if m_roman and m_iso:
+                    number = m_roman.group(1).upper()
+                    date = f"{m_iso.group(1)}-{m_iso.group(2)}-{m_iso.group(3)}"
+
+            if not number or not date:
                 continue
-            date = f"{year}-{month:02d}-{day:02d}"
 
             href = a["href"]
             if not href.startswith("http"):

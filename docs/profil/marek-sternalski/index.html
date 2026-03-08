@@ -110,6 +110,10 @@ canvas { max-height:760px; }
 footer { text-align:center; padding:40px 0; color:var(--muted); font-size:0.8rem; border-top:1px solid var(--border); margin-top:40px; }
 footer a { color:var(--accent); text-decoration:none; }
 #loading { text-align:center; padding:100px; color:var(--muted); }
+.info-banner { background:rgba(79,70,229,0.07); border:1px solid rgba(79,70,229,0.25); border-radius:12px; padding:20px 24px; margin-bottom:30px; line-height:1.7; }
+.info-banner h2 { font-size:1.1rem; font-weight:600; margin-bottom:8px; color:var(--accent); }
+.info-banner p { font-size:0.9rem; color:var(--text); margin-bottom:6px; }
+.info-banner .muted { color:var(--muted); font-size:0.82rem; }
 .name-link { color:var(--text); text-decoration:none; cursor:pointer; font-weight:600; }
 .name-link:hover { color:var(--accent); text-decoration:underline; }
 
@@ -228,6 +232,14 @@ header { min-height:80px; }
       <p>Jak głosują radni Miasta Poznania? Dane z protokołów BIP.</p>
     </div>
   </header>
+
+  <div class="info-banner">
+    <h2>Dane głosowań w przygotowaniu</h2>
+    <p>Biuletyn Informacji Publicznej Miasta Poznania nie udostępnia wyników głosowań imiennych w formacie umożliwiającym automatyczne przetwarzanie.</p>
+    <p>W dniu 8 marca 2026 r. złożono wniosek o udostępnienie informacji publicznej do Urzędu Miasta Poznania — o wyniki głosowań imiennych Rady Miasta Poznania IX kadencji (od sesji inauguracyjnej do bieżącej) w formacie maszynowym (CSV/XLSX/JSON).</p>
+    <p>Po otrzymaniu danych strona zostanie uruchomiona z pełnym monitoringiem głosowań, analogicznie do pozostałych miast w sieci Radoskop.</p>
+    <p class="muted">Podstawa prawna: art. 2 ust. 1 i art. 10 ust. 1 ustawy z dnia 6 września 2001 r. o dostępie do informacji publicznej (Dz.U. z 2022 r. poz. 902).</p>
+  </div>
 
   <div id="loading">Ładowanie danych...</div>
 

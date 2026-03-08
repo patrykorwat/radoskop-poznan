@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://poznan.radoskop.pl/sitemap.xml

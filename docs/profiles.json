@@ -1,0 +1,356 @@
+{
+  "profiles": [
+    {
+      "name": "Adam Szabelak",
+      "slug": "adam-szabelak",
+      "kadencje": {
+        "2024-2029": {
+          "club": "TD",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Agnieszka Lewandowska",
+      "slug": "agnieszka-lewandowska",
+      "kadencje": {
+        "2024-2029": {
+          "club": "Lewica",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Arkadiusz Marchewka",
+      "slug": "arkadiusz-marchewka",
+      "kadencje": {
+        "2024-2029": {
+          "club": "PiS",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Bartosz Zawieja",
+      "slug": "bartosz-zawieja",
+      "kadencje": {
+        "2024-2029": {
+          "club": "PiS",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Beata Urbańska",
+      "slug": "beata-urbanska",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Dominika Górna",
+      "slug": "dominika-gorna",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Dorota Bonk-Hammermeister",
+      "slug": "dorota-bonk-hammermeister",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Ewa Jemielity",
+      "slug": "ewa-jemielity",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Filip Olszak",
+      "slug": "filip-olszak",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Grzegorz Ganowicz",
+      "slug": "grzegorz-ganowicz",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Halina Owsianna",
+      "slug": "halina-owsianna",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Joanna Jaśkowiak",
+      "slug": "joanna-jaskowiak",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Jędrzej Solarski",
+      "slug": "jedrzej-solarski",
+      "kadencje": {
+        "2024-2029": {
+          "club": "TD",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Lidia Dudziak",
+      "slug": "lidia-dudziak",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Maciej Wituski",
+      "slug": "maciej-wituski",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Marek Sternalski",
+      "slug": "marek-sternalski",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Marek Woźniak",
+      "slug": "marek-wozniak",
+      "kadencje": {
+        "2024-2029": {
+          "club": "?",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Mariusz Wiśniewski",
+      "slug": "mariusz-wisniewski",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Marzena Wodzińska",
+      "slug": "marzena-wodzinska",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Mikołaj Wilk",
+      "slug": "mikolaj-wilk",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Natalia Konfederak",
+      "slug": "natalia-konfederak",
+      "kadencje": {
+        "2024-2029": {
+          "club": "Lewica",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Paweł Sowa",
+      "slug": "pawel-sowa",
+      "kadencje": {
+        "2024-2029": {
+          "club": "Lewica",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Przemysław Alexandrowicz",
+      "slug": "przemyslaw-alexandrowicz",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Rafał Grupiński",
+      "slug": "rafal-grupinski",
+      "kadencje": {
+        "2024-2029": {
+          "club": "TD",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Roger Russel",
+      "slug": "roger-russel",
+      "kadencje": {
+        "2024-2029": {
+          "club": "PiS",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Szymon Szynkowski vel Sęk",
+      "slug": "szymon-szynkowski-vel-sek",
+      "kadencje": {
+        "2024-2029": {
+          "club": "PiS",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Tomasz Kacprzak",
+      "slug": "tomasz-kacprzak",
+      "kadencje": {
+        "2024-2029": {
+          "club": "PiS",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Tomasz Lewandowski",
+      "slug": "tomasz-lewandowski",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Zdzisław Szkutnik",
+      "slug": "zdzislaw-szkutnik",
+      "kadencje": {
+        "2024-2029": {
+          "club": "PiS",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Zuzanna Chojnacka",
+      "slug": "zuzanna-chojnacka",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Łukasz Kapustka",
+      "slug": "lukasz-kapustka",
+      "kadencje": {
+        "2024-2029": {
+          "club": "Lewica",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    },
+    {
+      "name": "Łukasz Mikuła",
+      "slug": "lukasz-mikula",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": false,
+          "has_activity_data": false
+        }
+      }
+    }
+  ]
+}

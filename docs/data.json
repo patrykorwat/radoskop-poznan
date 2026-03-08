@@ -1,0 +1,24 @@
+{
+  "generated": "2026-03-07T21:42:17.509912",
+  "default_kadencja": "2024-2029",
+  "kadencje": [
+    {
+      "id": "2024-2029",
+      "label": "IX kadencja (2024–2029)",
+      "clubs": {
+        "KO": 18,
+        "PiS": 6,
+        "Lewica": 4,
+        "TD": 3
+      },
+      "sessions": [],
+      "total_sessions": 0,
+      "total_votes": 0,
+      "total_councilors": 34,
+      "councilors": [],
+      "votes": [],
+      "similarity_top": [],
+      "similarity_bottom": []
+    }
+  ]
+}

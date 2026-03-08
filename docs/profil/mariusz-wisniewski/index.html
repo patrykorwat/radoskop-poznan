@@ -426,6 +426,8 @@ async function init() {
       fetch('/profiles.json'),
       fetch('/budget.json')
     ]);
+    if (!dataResp.ok) throw new Error('Nie udało się załadować data.json (HTTP ' + dataResp.status + ')');
+    if (!profResp.ok) throw new Error('Nie udało się załadować profiles.json (HTTP ' + profResp.status + ')');
     RAW = await dataResp.json();
     PROFILES = await profResp.json();
     window.BUDGET = budgetResp.ok ? await budgetResp.json() : {};
@@ -479,7 +481,8 @@ async function init() {
     }
     selectKadencja(defaultKid);
   } catch(e) {
-    document.getElementById('loading').textContent = 'Błąd ładowania danych: ' + e.message;
+    const el = document.getElementById('loading');
+    el.innerHTML = '<div style="text-align:center;padding:40px 20px;"><p style="font-size:1.1rem;font-weight:600;margin-bottom:8px;">Nie udało się załadować danych</p><p style="color:#6b7280;font-size:0.9rem;">' + e.message + '</p><p style="color:#6b7280;font-size:0.85rem;margin-top:12px;">Dane głosowań Rady Miasta Poznania są w trakcie pozyskiwania. Sprawdź ponownie za kilka dni.</p></div>';
   }
 }
 

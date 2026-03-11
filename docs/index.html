@@ -276,13 +276,6 @@ header { min-height:80px; }
     </div>
   </header>
 
-  <div class="info-banner">
-    <h2>Dane głosowań w przygotowaniu</h2>
-    <p>Biuletyn Informacji Publicznej Miasta Poznania nie udostępnia wyników głosowań imiennych w formacie umożliwiającym automatyczne przetwarzanie.</p>
-    <p>W dniu 8 marca 2026 r. złożono wniosek o udostępnienie informacji publicznej do Urzędu Miasta Poznania — o wyniki głosowań imiennych Rady Miasta Poznania IX kadencji (od sesji inauguracyjnej do bieżącej) w formacie maszynowym (CSV/XLSX/JSON).</p>
-    <p>Po otrzymaniu danych strona zostanie uruchomiona z pełnym monitoringiem głosowań, analogicznie do pozostałych miast w sieci Radoskop.</p>
-    <p class="muted">Podstawa prawna: art. 11b oraz art. 14 ust. 4 ustawy z dnia 8 marca 1990 r. o samorządzie gminnym — głosowania rad gmin są jawne i imienne, a działalność organów gminy jest jawna.</p>
-  </div>
 
   <div id="loading">Ładowanie danych...</div>
 
@@ -646,8 +639,15 @@ function renderStats() {
     { label: 'Radnych', value: K.total_councilors },
     { label: 'Kluby', value: clubs.length },
   ];
+  // Add budget card if data available
+  const B = window.BUDGET;
+  if (B && B.totals && B.totals.length) {
+    const latest = B.totals[B.totals.length - 1];
+    const fmt = n => (n / 1e9).toFixed(1).replace('.', ',') + ' mld';
+    cards.push({ label: `Budżet ${latest.year}`, value: fmt(latest.expenditure), click: 'budget' });
+  }
   grid.innerHTML = cards.map(c => `
-    <div class="stat-card">
+    <div class="stat-card"${c.click ? ` style="cursor:pointer" onclick="activateTab('${c.click}')"` : ''}>
       <div class="label">${c.label}</div>
       <div class="value">${c.value}</div>
     </div>

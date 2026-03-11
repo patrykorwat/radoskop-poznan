@@ -15,7 +15,7 @@ fi
 source "$PROJECT_DIR/.venv/bin/activate"
 
 echo "[2/3] Instalacja zależności..."
-pip install --quiet requests beautifulsoup4 lxml pymupdf
+pip install --quiet requests pymupdf
 
 echo "[3/3] Uruchamianie scrapera..."
 python3 "$SCRIPT_DIR/scrape_poznan.py" \

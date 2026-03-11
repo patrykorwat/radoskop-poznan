@@ -2,19 +2,20 @@
 """
 Scraper danych głosowań Rady Miasta Poznania.
 
-Źródło: bip.poznan.pl
-BIP Poznań to standardowy HTML — nie wymaga JavaScript.
-Używa requests + BeautifulSoup do scrapowania, PyMuPDF do PDF.
+Źródło: bip.poznan.pl — JSON API
+BIP Poznań udostępnia publiczne JSON API bez autoryzacji.
 
-Struktura BIP:
-  1. Lista sesji: https://bip.poznan.pl/bip/sesje/
-  2. Sesja (strona): podstrona z listą głosowań
-  3. Wyniki głosowań (PDF): każdy PDF = jedno głosowanie
-     — Format tabelaryczny: nagłówek z tematem + tabela "Lp. / Nazwisko / Głos"
+Struktura BIP API:
+  1. Archiwum sesji: https://bip.poznan.pl/api-json/bip/sesje/archiwum/
+     — zwraca listę sesji ze slug + id
+  2. Sesja (JSON): https://bip.poznan.pl/api-json/bip/sesje/{slug},{id}/
+     — sesja_program.items[] → program[].zalaczniki → PDF-y głosowań
+  3. Załącznik (PDF): https://bip.poznan.pl/bip/attachments.html?co=show&id={id}
+     — format eSesja: nagłówek z tematem + tabela "Lp. / Nazwisko / Głos"
      — Głosy: ZA, PRZECIW, WSTRZYMUJĘ SIĘ, NIEOBECNY/NIEOBECNA
 
 Użycie:
-    pip install requests beautifulsoup4 lxml pymupdf
+    pip install requests pymupdf
     python scrape_poznan.py [--output docs/data.json] [--profiles docs/profiles.json]
 """
 
@@ -27,14 +28,6 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from itertools import combinations
 from pathlib import Path
-from urllib.parse import parse_qs, urljoin, urlparse
-
-try:
-    from bs4 import BeautifulSoup
-except ImportError:
-    print("Zainstaluj: pip install beautifulsoup4 lxml")
-    sys.exit(1)
-
 try:
     import requests
 except ImportError:
@@ -48,7 +41,9 @@ except ImportError:
     sys.exit(1)
 
 BIP_BASE = "https://bip.poznan.pl/"
-SESSIONS_URL = f"{BIP_BASE}bip/sesje/"
+API_BASE = "https://bip.poznan.pl/api-json/"
+SESSIONS_ARCHIVE_URL = f"{API_BASE}bip/sesje/archiwum/"
+ATTACHMENT_URL = "https://bip.poznan.pl/public/bip/attachments.att?co=show&instance=1097&parent={parent}&lang=pl&id={id}"
 
 KADENCJE = {
     "2024-2029": {"label": "IX kadencja (2024–2029)", "start": "2024-05-07"},
@@ -56,31 +51,33 @@ KADENCJE = {
 
 DELAY = 1.0
 
-# TODO: Zweryfikować ten spis — nazwy mogą być niezupełne lub nieprecyzyjne
-# Radni Poznania IX kadencja (przybliżone członkostwo klubów, 34 radnych)
+# Radni Poznania IX kadencja (34 radnych)
+# Nazwiska w formacie "Imię Nazwisko" -- jak w profiles.json
+# Źródło: PDF-y głosowań z BIP + oficjalna lista radnych
 COUNCILORS = {
-    # KO - Koalicja Obywatelska (~18 radnych)
-    "Grzegorz Ganowicz": "KO", "Halina Owsianna": "KO",
-    "Marzena Wodzińska": "KO", "Dominika Górna": "KO",
-    "Marek Sternalski": "KO", "Filip Olszak": "KO",
-    "Łukasz Mikuła": "KO", "Zuzanna Chojnacka": "KO",
-    "Przemysław Alexandrowicz": "KO", "Lidia Dudziak": "KO",
-    "Dorota Bonk-Hammermeister": "KO", "Joanna Jaśkowiak": "KO",
-    "Mariusz Wiśniewski": "KO", "Tomasz Lewandowski": "KO",
-    "Maciej Wituski": "KO", "Beata Urbańska": "KO",
-    "Ewa Jemielity": "KO", "Mikołaj Wilk": "KO",
-    # PiS (~6 radnych)
-    "Bartosz Zawieja": "PiS", "Szymon Szynkowski vel Sęk": "PiS",
-    "Arkadiusz Marchewka": "PiS", "Tomasz Kacprzak": "PiS",
-    "Roger Russel": "PiS", "Zdzisław Szkutnik": "PiS",
-    # Lewica (~4 radnych)
-    "Łukasz Kapustka": "Lewica", "Natalia Konfederak": "Lewica",
-    "Agnieszka Lewandowska": "Lewica", "Paweł Sowa": "Lewica",
-    # TD - Trzecia Droga (~3 radnych)
-    "Rafał Grupiński": "TD", "Jędrzej Solarski": "TD",
-    "Adam Szabelak": "TD",
-    # Niezrzeszeni (~3 radnych)
-    "Marek Woźniak": "?",
+    # KO - Koalicja Obywatelska
+    "Przemysław Alexandrowicz": "KO", "Magdalena Antolczyk": "KO",
+    "Zuzanna Bartel": "KO", "Dorota Bonk-Hammermeister": "KO",
+    "Wojciech Chudy": "KO", "Zbigniew Czerwiński": "KO",
+    "Monika Danelska": "KO", "Małgorzata Dudzic-Biskupska": "KO",
+    "Grzegorz Ganowicz": "KO", "Ewa Jemielity": "KO",
+    "Grzegorz Jura": "KO", "Tomasz Lewandowski": "KO",
+    "Maria Lisiecka-Pawełczak": "KO", "Łukasz Mikuła": "KO",
+    "Halina Owsianna": "KO", "Katarzyna Pampuch": "KO",
+    "Marcin Ruta": "KO", "Marek Sternalski": "KO",
+    # PiS
+    "Bartłomiej Ignaszewski": "PiS", "Wojciech Kręglewski": "PiS",
+    "Paweł Matuszak": "PiS", "Przemysław Plewiński": "PiS",
+    "Andrzej Prendke": "PiS", "Sara Szynkowska vel Sęk": "PiS",
+    # Lewica
+    "Łukasz Kapustka": "Lewica", "Justyna Kuberka": "Lewica",
+    "Marta Mazurek": "Lewica", "Klaudia Strzelecka": "Lewica",
+    # TD - Trzecia Droga
+    "Andrzej Rataj": "TD", "Mateusz Rozmiarek": "TD",
+    "Adam Szabelski": "TD",
+    # Niezrzeszeni / inne
+    "Tomasz Stachowiak": "?", "Tomasz Wierzbicki": "?",
+    "Małgorzata Woźniak": "?",
 }
 
 # Reusable HTTP session
@@ -98,13 +95,37 @@ def init_session():
     })
 
 
-def fetch(url: str) -> BeautifulSoup:
-    """Fetch a page and return BeautifulSoup."""
+def fetch_json(url: str) -> dict:
+    """Fetch a JSON API endpoint and return parsed dict."""
     time.sleep(DELAY)
     print(f"  GET {url}")
     resp = _session.get(url, timeout=30)
     resp.raise_for_status()
-    return BeautifulSoup(resp.text, "lxml")
+    return resp.json()
+
+
+def swap_name_order(name: str) -> str:
+    """Convert 'Lastname Firstname' (PDF) to 'Firstname Lastname' (profiles).
+
+    eSesja PDFs use 'Nazwisko Imię' format. The last word is always the first
+    name (imię), everything before is the last name (nazwisko).
+    Examples:
+      'Alexandrowicz Przemysław' → 'Przemysław Alexandrowicz'
+      'Bonk-Hammermeister Dorota' → 'Dorota Bonk-Hammermeister'
+      'Szynkowska vel Sęk Sara' → 'Sara Szynkowska vel Sęk'
+    """
+    parts = name.split()
+    if len(parts) >= 2:
+        return f"{parts[-1]} {' '.join(parts[:-1])}"
+    return name
+
+
+def make_name_key(name: str) -> tuple:
+    """Create a normalized key for fuzzy name matching.
+
+    Sorts lowercased parts so 'Jan Kowalski' == 'Kowalski Jan'.
+    """
+    return tuple(sorted(name.lower().split()))
 
 
 # ---------------------------------------------------------------------------
@@ -142,122 +163,63 @@ def parse_polish_date(text: str) -> str | None:
 # ---------------------------------------------------------------------------
 
 def scrape_session_list() -> list[dict]:
-    """Fetch the session list page and extract all sessions.
+    """Fetch the session list from BIP Poznań JSON API.
 
-    BIP Poznań format varies — we try several patterns:
-      1. eSesja: "XXXII (zwyczajna ...) 2026-03-17 09:00"
-      2. "nr XI dnia 21 listopada 2024"
-      3. href slug: "nr-xi-dnia-21-listopada-2024"
-      4. compact: "Sesja nr XI - 21.11.2024"
-      5. fallback: Roman numeral + ISO date anywhere in text
+    API endpoint: https://bip.poznan.pl/api-json/bip/sesje/archiwum/
+    Returns sessions with id, numer (roman), date, and kadencja.
     """
-    soup = fetch(SESSIONS_URL)
+    data = fetch_json(SESSIONS_ARCHIVE_URL)
+
     sessions = []
+    root = data.get("bip.poznan.pl", {}).get("data", [])
 
-    # Also check paginated pages
-    page_soups = [soup]
-    for a in soup.find_all("a", href=True):
-        text = a.get_text(strip=True)
-        href = a["href"]
-        if re.match(r'^\d+$', text) and int(text) > 1:
-            page_url = urljoin(SESSIONS_URL, href)
-            page_soups.append(fetch(page_url))
+    for entry in root:
+        sesje_data = entry.get("sesje", {})
+        items = sesje_data.get("items", [])
 
-    for page_soup in page_soups:
-        for a in page_soup.find_all("a", href=True):
-            text = a.get_text(strip=True)
+        for item in items:
+            # items can be {"sesja": {...}} or {"sesja": [{...}]}
+            sesja_list = item.get("sesja", {})
+            if isinstance(sesja_list, dict):
+                sesja_list = [sesja_list]
 
-            number = None
-            date = None
+            for sesja in sesja_list:
+                sesja_id = sesja.get("id")
+                numer = sesja.get("numer", "").strip()
+                date_str = sesja.get("sesja", "")  # "2025-01-17 09:00"
+                kadencja = sesja.get("kadencja")
 
-            # Pattern 1: BIP Poznań eSesja format
-            # "XXXII (zwyczajna ...) 2026-03-17 09:00"
-            # or just "XXXII 2026-03-17 09:00"
-            m_esesja = re.search(
-                r'^([IVXLCDM]+)\s*(?:\(.*?\)\s*)?(\d{4})-(\d{2})-(\d{2})',
-                text
-            )
-            if m_esesja:
-                number = m_esesja.group(1).upper()
-                year = int(m_esesja.group(2))
-                month = int(m_esesja.group(3))
-                day = int(m_esesja.group(4))
-                date = f"{year}-{month:02d}-{day:02d}"
+                if not sesja_id or not numer:
+                    continue
 
-            # Pattern 2: "nr XI dnia 21 listopada 2024"
-            if not number:
-                m = re.search(
-                    r'nr\s+([IVXLCDM]+)\s+dnia\s+(\d{1,2})\s+(\w+)\s+(\d{4})',
-                    text,
-                    re.IGNORECASE
-                )
-                if m:
-                    number = m.group(1).upper()
-                    day = int(m.group(2))
-                    month_name = m.group(3).lower()
-                    year = int(m.group(4))
-                    month_num = MONTHS_PL.get(month_name)
-                    if month_num:
-                        date = f"{year}-{month_num:02d}-{day:02d}"
+                # Parse date from "2025-01-17 09:00"
+                date = date_str[:10] if len(date_str) >= 10 else None
+                if not date:
+                    continue
 
-            # Pattern 3: href slug "nr-xi-dnia-21-listopada-2024"
-            if not number:
-                href_text = a["href"].split("/")[-1] if "/" in a["href"] else ""
-                m_href = re.search(
-                    r'nr-([ivxlcdm]+)-dnia-(\d{1,2})-(\w+)-(\d{4})',
-                    href_text.replace(",", "-"),
-                    re.IGNORECASE
-                )
-                if m_href:
-                    number = m_href.group(1).upper()
-                    day = int(m_href.group(2))
-                    month_name = m_href.group(3).lower()
-                    year = int(m_href.group(4))
-                    month_num = MONTHS_PL.get(month_name)
-                    if month_num:
-                        date = f"{year}-{month_num:02d}-{day:02d}"
+                # Build slug for API URL (lowercase roman numeral)
+                slug = numer.lower()
+                api_url = f"{API_BASE}bip/sesje/{slug},{sesja_id}/"
+                html_url = f"{BIP_BASE}bip/sesje/{slug},{sesja_id}/"
 
-            # Pattern 4: "Sesja nr XI - 21.11.2024"
-            if not number:
-                m2 = re.search(r'(?:sesj[ai]|nr)\s*\.?\s*([IVXLCDM]+)\s*[-–]\s*(\d{1,2})\.(\d{1,2})\.(\d{4})', text, re.IGNORECASE)
-                if m2:
-                    number = m2.group(1).upper()
-                    day = int(m2.group(2))
-                    month = int(m2.group(3))
-                    year = int(m2.group(4))
-                    date = f"{year}-{month:02d}-{day:02d}"
+                sessions.append({
+                    "id": sesja_id,
+                    "number": numer,
+                    "date": date,
+                    "url": html_url,
+                    "api_url": api_url,
+                    "kadencja": kadencja,
+                })
 
-            # Pattern 5: ISO date anywhere with Roman numeral anywhere
-            # e.g. text contains "XXXII" and "2026-03-17"
-            if not number:
-                m_roman = re.search(r'\b([IVXLCDM]{2,})\b', text)
-                m_iso = re.search(r'(\d{4})-(\d{2})-(\d{2})', text)
-                if m_roman and m_iso:
-                    number = m_roman.group(1).upper()
-                    date = f"{m_iso.group(1)}-{m_iso.group(2)}-{m_iso.group(3)}"
-
-            if not number or not date:
-                continue
-
-            href = a["href"]
-            if not href.startswith("http"):
-                href = urljoin(BIP_BASE, href)
-
-            sessions.append({
-                "number": number,
-                "date": date,
-                "url": href,
-            })
-
-    # Deduplicate by number
+    # Deduplicate by id
     seen = set()
     unique = []
     for s in sessions:
-        if s["number"] not in seen:
-            seen.add(s["number"])
+        if s["id"] not in seen:
+            seen.add(s["id"])
             unique.append(s)
 
-    # Filter by kadencja — only sessions from 2024-05-07 onwards
+    # Filter by kadencja -- only sessions from 2024-05-07 onwards
     kadencja_start = KADENCJE["2024-2029"]["start"]
     filtered = [s for s in unique if s["date"] >= kadencja_start]
     print(f"  Znaleziono {len(unique)} sesji ogółem, {len(filtered)} w kadencji 2024-2029")
@@ -274,43 +236,78 @@ def scrape_session_list() -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def scrape_session_pdf_links(session: dict) -> list[dict]:
-    """Fetch session page and find all vote PDF attachment links.
+    """Fetch session JSON API and find all vote PDF attachment links.
 
-    Each PDF on BIP Poznań is one vote result.
-    We look for both /attachments/download/NNNNN and .pdf links.
+    Each PDF on BIP Poznań is one vote result (eSesja system).
+    We look for attachments with "Głosowanie" in the description.
     """
-    soup = fetch(session["url"])
+    api_url = session.get("api_url")
+    if not api_url:
+        slug = session["number"].lower()
+        api_url = f"{API_BASE}bip/sesje/{slug},{session['id']}/"
+
+    data = fetch_json(api_url)
+
     pdf_links = []
+    root = data.get("bip.poznan.pl", {}).get("data", [])
 
-    for a in soup.find_all("a", href=True):
-        href = a["href"]
-        text = a.get_text(strip=True)
+    for entry in root:
+        program = entry.get("sesja_program", {})
+        items = program.get("items", [])
 
-        # Look for attachment download links or .pdf links
-        is_attachment = "/attachments/download/" in href
-        is_pdf = ".pdf" in href.lower()
+        for item in items:
+            prog_list = item.get("program", [])
+            if isinstance(prog_list, dict):
+                prog_list = [prog_list]
 
-        if not (is_attachment or is_pdf):
-            continue
+            for prog in prog_list:
+                # Get topic from opisy
+                topic = ""
+                opisy = prog.get("opisy", {}).get("items", [])
+                for opis_item in opisy:
+                    opis = opis_item.get("opis", {})
+                    if isinstance(opis, dict):
+                        dc_text = opis.get("dc_text", "")
+                        # Strip HTML tags
+                        clean = re.sub(r'<[^>]+>', '', dc_text).strip()
+                        if clean:
+                            topic = clean
 
-        if not href.startswith("http"):
-            href = urljoin(BIP_BASE, href)
+                # Get attachments
+                zal_data = prog.get("zalaczniki", {})
+                zal_items = zal_data.get("items", [])
 
-        # Extract ID for deduplication
-        if is_attachment:
-            m = re.search(r'/attachments/download/(\d+)', href)
-            att_id = m.group(1) if m else href
-        else:
-            m = re.search(r'/([^/]+\.pdf)', href)
-            att_id = m.group(1).replace(".pdf", "")[:50] if m else href
+                for zal_item in zal_items:
+                    if not isinstance(zal_item, dict):
+                        continue
 
-        pdf_links.append({
-            "url": href,
-            "text": text,
-            "att_id": att_id,
-        })
+                    # Can be {"zalacznik": {...}} or {"zalacznik": [{...}]}
+                    zal = zal_item.get("zalacznik", {})
+                    if isinstance(zal, dict):
+                        zal = [zal]
+                    if isinstance(zal, list):
+                        for z in zal:
+                            if not isinstance(z, dict):
+                                continue
+                            opis = z.get("opis", "")
+                            mime = z.get("mime", "")
+                            att_id = z.get("id")
+                            att_parent = z.get("parent", "")
 
-    # Deduplicate
+                            # Filter: only voting PDFs
+                            is_vote = "łosowani" in opis  # Głosowanie
+                            is_pdf = "pdf" in mime.lower()
+
+                            if is_vote and is_pdf and att_id:
+                                url = ATTACHMENT_URL.format(id=att_id, parent=att_parent)
+                                pdf_links.append({
+                                    "url": url,
+                                    "text": opis,
+                                    "att_id": str(att_id),
+                                    "topic_context": topic,
+                                })
+
+    # Deduplicate by att_id
     seen = set()
     unique_links = []
     for pl in pdf_links:
@@ -327,11 +324,14 @@ def scrape_session_pdf_links(session: dict) -> list[dict]:
 
 def download_pdf(pdf_url: str, cache_dir: Path) -> Path | None:
     """Download a PDF from URL to cache directory."""
-    # Extract ID from URL for filename
+    # Extract attachment ID from URL (co=show&id=NNNNN)
+    m_id = re.search(r'[?&]id=(\d+)', pdf_url)
     m_att = re.search(r'/attachments/download/(\d+)', pdf_url)
     m_pdf = re.search(r'/([^/]+\.pdf)', pdf_url)
 
-    if m_att:
+    if m_id:
+        filename = f"glosowanie_{m_id.group(1)}.pdf"
+    elif m_att:
         filename = f"glosowanie_{m_att.group(1)}.pdf"
     elif m_pdf:
         filename = m_pdf.group(1)
@@ -490,48 +490,50 @@ def parse_vote_from_pdf(pdf_path: Path) -> list[dict]:
             break
         table_lines.append(l)
 
-    # Parse: number → name → vote
-    vote_values = {"ZA", "PRZECIW", "WSTRZYMUJĘ SIĘ", "NIEOBECNY", "NIEOBECNA",
-                   "NIE GŁOSOWAŁ", "NIE GŁOSOWAŁA", "WSTRZYMAŁ SIĘ", "WSTRZYMAŁA SIĘ",
-                   "OBECNY", "OBECNA"}
+    # Parse using regex — handles two-column PDF layout where PyMuPDF
+    # merges columns into one line, e.g.:
+    #   "1 Alexandrowicz Przemysław WSTRZYMUJE SIĘ 18 Matuszak Paweł ZA"
+    VOTE_RE = re.compile(
+        r'(\d+)\.?\s+'                  # Lp (ordinal number)
+        r'([^0-9]+?)\s+'                # Name (no digits, non-greedy)
+        r'(ZA|PRZECIW'
+        r'|WSTRZYMUJ[EĘ]\s+SI[ĘE]'
+        r'|WSTRZYMA[ŁL]A?\s+SI[ĘE]'
+        r'|NIEOBECN[YA]'
+        r'|NIE\s+G[ŁL]OSOWA[ŁL]A?'
+        r'|OBECN[YA]'
+        r'|NIEODDANY'
+        r')(?=\s+\d|\s*$)',             # followed by next entry or end
+        re.IGNORECASE
+    )
 
-    i = 0
-    pending_name = None
-    while i < len(table_lines):
-        item = table_lines[i]
+    # Join all table lines into one string for regex matching
+    table_text = ' '.join(table_lines)
+    matches = VOTE_RE.findall(table_text)
 
-        # Skip ordinal numbers (1., 2., etc.)
-        if re.match(r'^\d+\.$', item):
-            i += 1
+    for _lp, raw_name, vote_str in matches:
+        name = re.sub(r'\s+', ' ', raw_name).strip()
+        name = re.sub(r'-\s+', '-', name)
+        if not name or len(name) < 3:
             continue
+        # PDF uses "Nazwisko Imię" — swap to "Imię Nazwisko"
+        name = swap_name_order(name)
 
-        item_upper = item.upper().strip()
-        if item_upper in vote_values:
-            if pending_name:
-                name = re.sub(r'-\s+', '-', pending_name.strip())
-
-                if item_upper == "ZA":
-                    named_votes["za"].append(name)
-                elif item_upper == "PRZECIW":
-                    named_votes["przeciw"].append(name)
-                elif "WSTRZYMUJ" in item_upper or "WSTRZYMAŁ" in item_upper:
-                    named_votes["wstrzymal_sie"].append(name)
-                elif "NIE GŁOSOWAŁ" in item_upper:
-                    named_votes["brak_glosu"].append(name)
-                elif "NIEOBECN" in item_upper:
-                    named_votes["nieobecni"].append(name)
-                elif item_upper in ("OBECNY", "OBECNA"):
-                    named_votes["brak_glosu"].append(name)
-
-                pending_name = None
-            i += 1
-            continue
-
-        if pending_name:
-            pending_name = pending_name + " " + item
-        else:
-            pending_name = item
-        i += 1
+        vote_upper = vote_str.upper().strip()
+        if vote_upper == "ZA":
+            named_votes["za"].append(name)
+        elif vote_upper == "PRZECIW":
+            named_votes["przeciw"].append(name)
+        elif "WSTRZYMUJ" in vote_upper or "WSTRZYMA" in vote_upper:
+            named_votes["wstrzymal_sie"].append(name)
+        elif "NIE" in vote_upper and "GŁOSOWA" in vote_upper:
+            named_votes["brak_glosu"].append(name)
+        elif "NIEOBECN" in vote_upper:
+            named_votes["nieobecni"].append(name)
+        elif "OBECN" in vote_upper:
+            named_votes["brak_glosu"].append(name)
+        elif vote_upper == "NIEODDANY":
+            named_votes["brak_glosu"].append(name)
 
     # Deduplicate
     for cat in named_votes:
@@ -553,7 +555,10 @@ def parse_vote_from_pdf(pdf_path: Path) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def load_profiles(profiles_path: str) -> dict:
-    """Load profiles.json with councilor → club mapping."""
+    """Load profiles.json with councilor → club mapping.
+
+    Returns dict keyed by both original name AND name_key for fuzzy matching.
+    """
     path = Path(profiles_path)
     if not path.exists():
         print(f"  UWAGA: Brak {profiles_path} — kluby będą oznaczone jako '?'")
@@ -562,17 +567,43 @@ def load_profiles(profiles_path: str) -> dict:
         data = json.load(f)
 
     result = {}
+    key_lookup = {}  # make_name_key → profile dict
     for p in data.get("profiles", []):
         name = p["name"]
         kadencje = p.get("kadencje", {})
         if kadencje:
             latest = list(kadencje.values())[-1]
-            result[name] = {
+            profile = {
                 "name": name,
                 "club": latest.get("club", "?"),
                 "district": latest.get("okręg"),
             }
+            result[name] = profile
+            key_lookup[make_name_key(name)] = profile
+
+    # Also add COUNCILORS hardcoded dict entries
+    for cname, club in COUNCILORS.items():
+        if cname not in result:
+            profile = {"name": cname, "club": club, "district": None}
+            result[cname] = profile
+            key_lookup[make_name_key(cname)] = profile
+
+    # Store key_lookup for use in matching
+    result["__key_lookup__"] = key_lookup
     return result
+
+
+def lookup_profile(name: str, profiles: dict) -> dict:
+    """Look up a councilor profile by name, trying exact match then key match."""
+    # Exact match
+    if name in profiles and isinstance(profiles[name], dict) and "club" in profiles[name]:
+        return profiles[name]
+    # Key-based fuzzy match (handles name order differences)
+    key_lookup = profiles.get("__key_lookup__", {})
+    key = make_name_key(name)
+    if key in key_lookup:
+        return key_lookup[key]
+    return {"name": name, "club": "?", "district": None}
 
 
 def compute_club_majority(vote: dict, profiles: dict) -> dict[str, str]:
@@ -580,7 +611,7 @@ def compute_club_majority(vote: dict, profiles: dict) -> dict[str, str]:
     club_votes = defaultdict(lambda: {"za": 0, "przeciw": 0, "wstrzymal_sie": 0})
     for cat in ["za", "przeciw", "wstrzymal_sie"]:
         for name in vote["named_votes"].get(cat, []):
-            club = profiles.get(name, {}).get("club", "?")
+            club = lookup_profile(name, profiles).get("club", "?")
             if club != "?":
                 club_votes[club][cat] += 1
 
@@ -600,7 +631,7 @@ def build_councilors(all_votes: list[dict], sessions: list[dict], profiles: dict
 
     councilors = {}
     for name in sorted(all_names):
-        prof = profiles.get(name, {})
+        prof = lookup_profile(name, profiles)
         councilors[name] = {
             "name": name,
             "club": prof.get("club", "?"),
@@ -834,7 +865,7 @@ def main():
     DELAY = args.delay
 
     print("=== Radoskop Scraper: Rada Miasta Poznania (BIP) ===")
-    print(f"Backend: requests + BeautifulSoup + PyMuPDF")
+    print(f"Backend: requests + PyMuPDF (JSON API)")
     print()
 
     init_session()
@@ -850,7 +881,7 @@ def main():
 
     if not all_sessions:
         print("BŁĄD: Nie znaleziono sesji.")
-        print(f"Sprawdź ręcznie: {SESSIONS_URL}")
+        print(f"Sprawdź ręcznie: {SESSIONS_ARCHIVE_URL}")
         sys.exit(1)
 
     if args.max_sessions > 0:
@@ -867,30 +898,21 @@ def main():
         s0 = all_sessions[-1]  # latest session
         print(f"\n[explore] Sesja {s0['number']} ({s0['date']})")
         print(f"  URL: {s0['url']}")
-        soup = fetch(s0["url"])
 
-        # Show attachment links
-        att_links = []
-        for a in soup.find_all("a", href=True):
-            href = a["href"]
-            text = a.get_text(strip=True)[:120]
-            if "/attachments/download/" in href or ".pdf" in href.lower():
-                att_links.append((text, href))
+        # Use JSON API to find PDF attachments
+        pdf_links = scrape_session_pdf_links(s0)
 
-        print(f"\n--- Załączniki PDF ({len(att_links)}) ---")
-        for text, href in att_links[:10]:
-            print(f"  [{text}] -> {href}")
-        if len(att_links) > 10:
-            print(f"  ... i {len(att_links)-10} więcej")
+        print(f"\n--- Załączniki głosowań ({len(pdf_links)}) ---")
+        for pl in pdf_links[:10]:
+            print(f"  [{pl['text'][:80]}] -> {pl['url']}")
+        if len(pdf_links) > 10:
+            print(f"  ... i {len(pdf_links)-10} więcej")
 
         # Try downloading and parsing first PDF
-        if att_links:
+        if pdf_links:
             cache = Path("pdfs")
             cache.mkdir(exist_ok=True)
-            url = att_links[0][1]
-            if not url.startswith("http"):
-                url = urljoin(BIP_BASE, url)
-            pdf_path = download_pdf(url, cache)
+            pdf_path = download_pdf(pdf_links[0]["url"], cache)
             if pdf_path:
                 result = parse_vote_from_pdf(pdf_path)
                 if result:

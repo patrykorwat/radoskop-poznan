@@ -1,68 +1,486 @@
 {
   "profiles": [
     {
-      "name": "Adam Szabelak",
-      "slug": "adam-szabelak",
+      "name": "Adam Szabelski",
+      "slug": "adam-szabelski",
       "kadencje": {
         "2024-2029": {
           "club": "TD",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 89.7,
+          "aktywnosc": 93.7,
+          "zgodnosc_z_klubem": 95.4,
+          "votes_za": 711,
+          "votes_przeciw": 65,
+          "votes_wstrzymal": 35,
+          "votes_brak": 2,
+          "votes_nieobecny": 55,
+          "votes_total": 868,
+          "rebellion_count": 37,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_004_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_019_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_015_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_025_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_027_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-09-03_028_000",
+              "session": "2024-09-03",
+              "topic": "VII sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "wstrzymal_sie"
+            },
+            {
+              "vote_id": "2024-10-15_013_000",
+              "session": "2024-10-15",
+              "topic": "IX sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_011_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_012_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_014_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_015_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_018_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_020_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_022_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_026_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_030_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_038_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_042_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_065_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2025-02-18_027_000",
+              "session": "2025-02-18",
+              "topic": "XV sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
     {
-      "name": "Agnieszka Lewandowska",
-      "slug": "agnieszka-lewandowska",
-      "kadencje": {
-        "2024-2029": {
-          "club": "Lewica",
-          "has_voting_data": false,
-          "has_activity_data": false
-        }
-      }
-    },
-    {
-      "name": "Arkadiusz Marchewka",
-      "slug": "arkadiusz-marchewka",
+      "name": "Andrzej Prendke",
+      "slug": "andrzej-prendke",
       "kadencje": {
         "2024-2029": {
           "club": "PiS",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 89.7,
+          "aktywnosc": 86.5,
+          "zgodnosc_z_klubem": 99.2,
+          "votes_za": 685,
+          "votes_przeciw": 59,
+          "votes_wstrzymal": 5,
+          "votes_brak": 2,
+          "votes_nieobecny": 117,
+          "votes_total": 868,
+          "rebellion_count": 6,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-09-03_001_000",
+              "session": "2024-09-03",
+              "topic": "VII sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-10-15_029_000",
+              "session": "2024-10-15",
+              "topic": "IX sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-04_020_000",
+              "session": "2025-11-04",
+              "topic": "XXVI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-12-18_016_000",
+              "session": "2025-12-18",
+              "topic": "XXIX sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2025-12-18_017_000",
+              "session": "2025-12-18",
+              "topic": "XXIX sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
     {
-      "name": "Bartosz Zawieja",
-      "slug": "bartosz-zawieja",
+      "name": "Andrzej Rataj",
+      "slug": "andrzej-rataj",
+      "kadencje": {
+        "2024-2029": {
+          "club": "TD",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 89.7,
+          "aktywnosc": 81.0,
+          "zgodnosc_z_klubem": 86.6,
+          "votes_za": 540,
+          "votes_przeciw": 117,
+          "votes_wstrzymal": 7,
+          "votes_brak": 39,
+          "votes_nieobecny": 165,
+          "votes_total": 868,
+          "rebellion_count": 89,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_016_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "wstrzymal_sie"
+            },
+            {
+              "vote_id": "2024-05-28_017_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "wstrzymal_sie"
+            },
+            {
+              "vote_id": "2024-06-11_015_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_021_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-06-11_022_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-07-09_024_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "wstrzymal_sie"
+            },
+            {
+              "vote_id": "2024-07-09_026_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "wstrzymal_sie"
+            },
+            {
+              "vote_id": "2024-07-09_027_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-09-03_032_000",
+              "session": "2024-09-03",
+              "topic": "VII sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-11-19_001_000",
+              "session": "2024-11-19",
+              "topic": "XI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-11-19_002_000",
+              "session": "2024-11-19",
+              "topic": "XI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-11-19_003_000",
+              "session": "2024-11-19",
+              "topic": "XI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-11-19_004_000",
+              "session": "2024-11-19",
+              "topic": "XI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-11-19_005_000",
+              "session": "2024-11-19",
+              "topic": "XI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-11-19_006_000",
+              "session": "2024-11-19",
+              "topic": "XI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_009_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-12-19_010_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-12-19_011_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_012_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Bartłomiej Ignaszewski",
+      "slug": "bartlomiej-ignaszewski",
       "kadencje": {
         "2024-2029": {
           "club": "PiS",
-          "has_voting_data": false,
-          "has_activity_data": false
-        }
-      }
-    },
-    {
-      "name": "Beata Urbańska",
-      "slug": "beata-urbanska",
-      "kadencje": {
-        "2024-2029": {
-          "club": "KO",
-          "has_voting_data": false,
-          "has_activity_data": false
-        }
-      }
-    },
-    {
-      "name": "Dominika Górna",
-      "slug": "dominika-gorna",
-      "kadencje": {
-        "2024-2029": {
-          "club": "KO",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 100.0,
+          "aktywnosc": 96.0,
+          "zgodnosc_z_klubem": 98.8,
+          "votes_za": 694,
+          "votes_przeciw": 124,
+          "votes_wstrzymal": 8,
+          "votes_brak": 7,
+          "votes_nieobecny": 35,
+          "votes_total": 868,
+          "rebellion_count": 10,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_016_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-09-03_001_000",
+              "session": "2024-09-03",
+              "topic": "VII sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-10-15_018_000",
+              "session": "2024-10-15",
+              "topic": "IX sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-10-15_029_000",
+              "session": "2024-10-15",
+              "topic": "IX sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-03-11_020_000",
+              "session": "2025-03-11",
+              "topic": "XVI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-04-29_026_000",
+              "session": "2025-04-29",
+              "topic": "XVIII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-05-27_028_000",
+              "session": "2025-05-27",
+              "topic": "XIX sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-04_020_000",
+              "session": "2025-11-04",
+              "topic": "XXVI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-12-18_017_000",
+              "session": "2025-12-18",
+              "topic": "XXIX sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
@@ -393,17 +811,6 @@
       }
     },
     {
-      "name": "Filip Olszak",
-      "slug": "filip-olszak",
-      "kadencje": {
-        "2024-2029": {
-          "club": "KO",
-          "has_voting_data": false,
-          "has_activity_data": false
-        }
-      }
-    },
-    {
       "name": "Grzegorz Ganowicz",
       "slug": "grzegorz-ganowicz",
       "kadencje": {
@@ -441,6 +848,36 @@
               "session": "2024-10-15",
               "topic": "IX sesja Rady Miasta Poznania",
               "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Grzegorz Jura",
+      "slug": "grzegorz-jura",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 89.7,
+          "aktywnosc": 82.6,
+          "zgodnosc_z_klubem": 99.9,
+          "votes_za": 587,
+          "votes_przeciw": 121,
+          "votes_wstrzymal": 0,
+          "votes_brak": 9,
+          "votes_nieobecny": 151,
+          "votes_total": 868,
+          "rebellion_count": 1,
+          "rebellions": [
+            {
+              "vote_id": "2024-10-15_029_000",
+              "session": "2024-10-15",
+              "topic": "IX sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
               "club_majority": "za"
             }
           ]
@@ -611,46 +1048,502 @@
       }
     },
     {
-      "name": "Joanna Jaśkowiak",
-      "slug": "joanna-jaskowiak",
+      "name": "Justyna Kuberka",
+      "slug": "justyna-kuberka",
       "kadencje": {
         "2024-2029": {
-          "club": "KO",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "club": "Lewica",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 96.6,
+          "aktywnosc": 97.8,
+          "zgodnosc_z_klubem": 96.8,
+          "votes_za": 711,
+          "votes_przeciw": 121,
+          "votes_wstrzymal": 2,
+          "votes_brak": 15,
+          "votes_nieobecny": 2,
+          "votes_total": 868,
+          "rebellion_count": 27,
+          "rebellions": [
+            {
+              "vote_id": "2024-09-03_001_000",
+              "session": "2024-09-03",
+              "topic": "VII sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-11-19_002_000",
+              "session": "2024-11-19",
+              "topic": "XI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-11-19_004_000",
+              "session": "2024-11-19",
+              "topic": "XI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_011_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_013_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_014_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_015_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_016_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_017_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_025_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_028_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_029_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_030_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_031_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_033_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_037_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_039_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_040_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_041_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_042_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
     {
-      "name": "Jędrzej Solarski",
-      "slug": "jedrzej-solarski",
+      "name": "Katarzyna Pampuch",
+      "slug": "katarzyna-pampuch",
       "kadencje": {
         "2024-2029": {
-          "club": "TD",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "club": "KO",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 100.0,
+          "aktywnosc": 97.8,
+          "zgodnosc_z_klubem": 99.2,
+          "votes_za": 720,
+          "votes_przeciw": 121,
+          "votes_wstrzymal": 7,
+          "votes_brak": 1,
+          "votes_nieobecny": 19,
+          "votes_total": 868,
+          "rebellion_count": 7,
+          "rebellions": [
+            {
+              "vote_id": "2024-06-25_006_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-18_006_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-18_015_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-12-18_028_000",
+              "session": "2025-12-18",
+              "topic": "XXIX sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2025-12-18_029_000",
+              "session": "2025-12-18",
+              "topic": "XXIX sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2025-12-18_030_000",
+              "session": "2025-12-18",
+              "topic": "XXIX sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2026-02-10_019_000",
+              "session": "2026-02-10",
+              "topic": "XXXI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
     {
-      "name": "Lidia Dudziak",
-      "slug": "lidia-dudziak",
+      "name": "Klaudia Strzelecka",
+      "slug": "klaudia-strzelecka",
       "kadencje": {
         "2024-2029": {
-          "club": "KO",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "club": "Lewica",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 96.6,
+          "aktywnosc": 81.3,
+          "zgodnosc_z_klubem": 67.1,
+          "votes_za": 518,
+          "votes_przeciw": 40,
+          "votes_wstrzymal": 137,
+          "votes_brak": 11,
+          "votes_nieobecny": 162,
+          "votes_total": 868,
+          "rebellion_count": 229,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_004_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_007_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_012_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_013_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_016_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_017_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_019_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_013_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_014_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-06-11_015_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-06-11_016_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_019_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_020_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_021_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_022_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_027_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_028_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_001_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_002_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
     {
-      "name": "Maciej Wituski",
-      "slug": "maciej-wituski",
+      "name": "Magdalena Antolczyk",
+      "slug": "magdalena-antolczyk",
       "kadencje": {
         "2024-2029": {
           "club": "KO",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 96.6,
+          "aktywnosc": 95.3,
+          "zgodnosc_z_klubem": 99.4,
+          "votes_za": 698,
+          "votes_przeciw": 121,
+          "votes_wstrzymal": 4,
+          "votes_brak": 4,
+          "votes_nieobecny": 41,
+          "votes_total": 868,
+          "rebellion_count": 5,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-09-03_032_000",
+              "session": "2024-09-03",
+              "topic": "VII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_051_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2025-03-11_019_000",
+              "session": "2025-03-11",
+              "topic": "XVI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-12-18_038_000",
+              "session": "2025-12-18",
+              "topic": "XXIX sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Marcin Ruta",
+      "slug": "marcin-ruta",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 100.0,
+          "aktywnosc": 92.4,
+          "zgodnosc_z_klubem": 99.6,
+          "votes_za": 669,
+          "votes_przeciw": 125,
+          "votes_wstrzymal": 2,
+          "votes_brak": 6,
+          "votes_nieobecny": 66,
+          "votes_total": 868,
+          "rebellion_count": 3,
+          "rebellions": [
+            {
+              "vote_id": "2024-06-25_006_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-04_020_000",
+              "session": "2025-11-04",
+              "topic": "XXVI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-18_014_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
@@ -685,68 +1578,555 @@
       }
     },
     {
-      "name": "Marek Woźniak",
-      "slug": "marek-wozniak",
-      "kadencje": {
-        "2024-2029": {
-          "club": "?",
-          "has_voting_data": false,
-          "has_activity_data": false
-        }
-      }
-    },
-    {
-      "name": "Mariusz Wiśniewski",
-      "slug": "mariusz-wisniewski",
+      "name": "Maria Lisiecka-Pawełczak",
+      "slug": "maria-lisiecka-pawelczak",
       "kadencje": {
         "2024-2029": {
           "club": "KO",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 100.0,
+          "aktywnosc": 95.4,
+          "zgodnosc_z_klubem": 99.5,
+          "votes_za": 699,
+          "votes_przeciw": 121,
+          "votes_wstrzymal": 4,
+          "votes_brak": 4,
+          "votes_nieobecny": 40,
+          "votes_total": 868,
+          "rebellion_count": 4,
+          "rebellions": [
+            {
+              "vote_id": "2024-06-11_014_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-06-11_016_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2026-01-20_021_000",
+              "session": "2026-01-20",
+              "topic": "XXX sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2026-02-10_037_000",
+              "session": "2026-02-10",
+              "topic": "XXXI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
     {
-      "name": "Marzena Wodzińska",
-      "slug": "marzena-wodzinska",
-      "kadencje": {
-        "2024-2029": {
-          "club": "KO",
-          "has_voting_data": false,
-          "has_activity_data": false
-        }
-      }
-    },
-    {
-      "name": "Mikołaj Wilk",
-      "slug": "mikolaj-wilk",
-      "kadencje": {
-        "2024-2029": {
-          "club": "KO",
-          "has_voting_data": false,
-          "has_activity_data": false
-        }
-      }
-    },
-    {
-      "name": "Natalia Konfederak",
-      "slug": "natalia-konfederak",
+      "name": "Marta Mazurek",
+      "slug": "marta-mazurek",
       "kadencje": {
         "2024-2029": {
           "club": "Lewica",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 93.1,
+          "aktywnosc": 89.1,
+          "zgodnosc_z_klubem": 96.1,
+          "votes_za": 638,
+          "votes_przeciw": 121,
+          "votes_wstrzymal": 5,
+          "votes_brak": 9,
+          "votes_nieobecny": 85,
+          "votes_total": 868,
+          "rebellion_count": 30,
+          "rebellions": [
+            {
+              "vote_id": "2024-06-11_014_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-09-03_001_000",
+              "session": "2024-09-03",
+              "topic": "VII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-09-24_043_000",
+              "session": "2024-09-24",
+              "topic": "VIII sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-11-19_002_000",
+              "session": "2024-11-19",
+              "topic": "XI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-11-19_004_000",
+              "session": "2024-11-19",
+              "topic": "XI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_011_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_013_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_014_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_015_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_016_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_017_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_025_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_028_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_029_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_030_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_031_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_033_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_037_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_039_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_041_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
     {
-      "name": "Paweł Sowa",
-      "slug": "pawel-sowa",
+      "name": "Mateusz Rozmiarek",
+      "slug": "mateusz-rozmiarek",
       "kadencje": {
         "2024-2029": {
-          "club": "Lewica",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "club": "TD",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 100.0,
+          "aktywnosc": 96.5,
+          "zgodnosc_z_klubem": 75.4,
+          "votes_za": 634,
+          "votes_przeciw": 56,
+          "votes_wstrzymal": 146,
+          "votes_brak": 2,
+          "votes_nieobecny": 30,
+          "votes_total": 868,
+          "rebellion_count": 206,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_004_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_012_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_013_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_019_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_013_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_014_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-06-11_016_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_019_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_020_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_028_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_034_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_000_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_001_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_002_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_004_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_007_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_021_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_022_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_025_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Małgorzata Dudzic-Biskupska",
+      "slug": "malgorzata-dudzic-biskupska",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 93.1,
+          "aktywnosc": 83.6,
+          "zgodnosc_z_klubem": 99.2,
+          "votes_za": 582,
+          "votes_przeciw": 123,
+          "votes_wstrzymal": 3,
+          "votes_brak": 18,
+          "votes_nieobecny": 142,
+          "votes_total": 868,
+          "rebellion_count": 6,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_006_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_015_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-18_006_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-12-18_066_000",
+              "session": "2025-12-18",
+              "topic": "XXIX sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2026-02-10_019_000",
+              "session": "2026-02-10",
+              "topic": "XXXI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Małgorzata Woźniak",
+      "slug": "malgorzata-wozniak",
+      "kadencje": {
+        "2024-2029": {
+          "club": "niezrzeszony",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 96.6,
+          "aktywnosc": 91.9,
+          "zgodnosc_z_klubem": 99.9,
+          "votes_za": 645,
+          "votes_przeciw": 125,
+          "votes_wstrzymal": 1,
+          "votes_brak": 27,
+          "votes_nieobecny": 70,
+          "votes_total": 868,
+          "rebellion_count": 1,
+          "rebellions": [
+            {
+              "vote_id": "2024-06-25_006_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Monika Danelska",
+      "slug": "monika-danelska",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 100.0,
+          "aktywnosc": 96.5,
+          "zgodnosc_z_klubem": 99.9,
+          "votes_za": 697,
+          "votes_przeciw": 123,
+          "votes_wstrzymal": 0,
+          "votes_brak": 18,
+          "votes_nieobecny": 30,
+          "votes_total": 868,
+          "rebellion_count": 1,
+          "rebellions": [
+            {
+              "vote_id": "2025-11-18_006_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Paweł Matuszak",
+      "slug": "pawel-matuszak",
+      "kadencje": {
+        "2024-2029": {
+          "club": "PiS",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 100.0,
+          "aktywnosc": 95.7,
+          "zgodnosc_z_klubem": 99.5,
+          "votes_za": 691,
+          "votes_przeciw": 122,
+          "votes_wstrzymal": 2,
+          "votes_brak": 16,
+          "votes_nieobecny": 37,
+          "votes_total": 868,
+          "rebellion_count": 4,
+          "rebellions": [
+            {
+              "vote_id": "2024-06-11_014_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_015_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "wstrzymal_sie"
+            },
+            {
+              "vote_id": "2024-06-25_006_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-18_015_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
@@ -914,46 +2294,328 @@
       }
     },
     {
-      "name": "Rafał Grupiński",
-      "slug": "rafal-grupinski",
+      "name": "Przemysław Plewiński",
+      "slug": "przemyslaw-plewinski",
       "kadencje": {
         "2024-2029": {
-          "club": "TD",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "club": "PiS",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 96.6,
+          "aktywnosc": 91.7,
+          "zgodnosc_z_klubem": 89.1,
+          "votes_za": 694,
+          "votes_przeciw": 70,
+          "votes_wstrzymal": 24,
+          "votes_brak": 8,
+          "votes_nieobecny": 72,
+          "votes_total": 868,
+          "rebellion_count": 86,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_004_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_013_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_016_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_017_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_019_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_014_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_021_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_022_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_024_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_025_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_026_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_027_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-09-03_010_000",
+              "session": "2024-09-03",
+              "topic": "VII sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_009_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_010_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-19_011_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-12-19_012_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-12-19_013_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-12-19_014_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-12-19_015_000",
+              "session": "2024-12-19",
+              "topic": "XIII sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            }
+          ]
         }
       }
     },
     {
-      "name": "Roger Russel",
-      "slug": "roger-russel",
+      "name": "Sara Szynkowska vel Sęk",
+      "slug": "sara-szynkowska-vel-sek",
       "kadencje": {
         "2024-2029": {
           "club": "PiS",
-          "has_voting_data": false,
-          "has_activity_data": false
-        }
-      }
-    },
-    {
-      "name": "Szymon Szynkowski vel Sęk",
-      "slug": "szymon-szynkowski-vel-sek",
-      "kadencje": {
-        "2024-2029": {
-          "club": "PiS",
-          "has_voting_data": false,
-          "has_activity_data": false
-        }
-      }
-    },
-    {
-      "name": "Tomasz Kacprzak",
-      "slug": "tomasz-kacprzak",
-      "kadencje": {
-        "2024-2029": {
-          "club": "PiS",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 96.6,
+          "aktywnosc": 83.3,
+          "zgodnosc_z_klubem": 58.9,
+          "votes_za": 515,
+          "votes_przeciw": 56,
+          "votes_wstrzymal": 134,
+          "votes_brak": 18,
+          "votes_nieobecny": 145,
+          "votes_total": 868,
+          "rebellion_count": 290,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-07_009_000",
+              "session": "2024-05-07",
+              "topic": "I sesja inauguracyjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_004_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_007_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_012_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_013_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_016_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_017_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_019_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_015_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "wstrzymal_sie"
+            },
+            {
+              "vote_id": "2024-06-11_016_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_018_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_019_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_020_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_021_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_022_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_028_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_034_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_001_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_002_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
@@ -1121,24 +2783,511 @@
       }
     },
     {
-      "name": "Zdzisław Szkutnik",
-      "slug": "zdzislaw-szkutnik",
+      "name": "Tomasz Stachowiak",
+      "slug": "tomasz-stachowiak",
       "kadencje": {
         "2024-2029": {
-          "club": "PiS",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "club": "niezrzeszony",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 93.1,
+          "aktywnosc": 81.3,
+          "zgodnosc_z_klubem": 99.1,
+          "votes_za": 563,
+          "votes_przeciw": 116,
+          "votes_wstrzymal": 4,
+          "votes_brak": 23,
+          "votes_nieobecny": 162,
+          "votes_total": 868,
+          "rebellion_count": 6,
+          "rebellions": [
+            {
+              "vote_id": "2024-09-03_001_000",
+              "session": "2024-09-03",
+              "topic": "VII sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2025-01-17_014_000",
+              "session": "2025-01-17",
+              "topic": "XIV sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-09-02_017_000",
+              "session": "2025-09-02",
+              "topic": "XXIII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-18_006_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2025-11-18_015_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2026-02-10_019_000",
+              "session": "2026-02-10",
+              "topic": "XXXI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },
     {
-      "name": "Zuzanna Chojnacka",
-      "slug": "zuzanna-chojnacka",
+      "name": "Tomasz Wierzbicki",
+      "slug": "tomasz-wierzbicki",
+      "kadencje": {
+        "2024-2029": {
+          "club": "niezrzeszony",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 93.1,
+          "aktywnosc": 92.1,
+          "zgodnosc_z_klubem": 99.4,
+          "votes_za": 665,
+          "votes_przeciw": 124,
+          "votes_wstrzymal": 4,
+          "votes_brak": 6,
+          "votes_nieobecny": 69,
+          "votes_total": 868,
+          "rebellion_count": 5,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_015_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-10-15_018_000",
+              "session": "2024-10-15",
+              "topic": "IX sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-10-15_029_000",
+              "session": "2024-10-15",
+              "topic": "IX sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-04_020_000",
+              "session": "2025-11-04",
+              "topic": "XXVI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Wojciech Chudy",
+      "slug": "wojciech-chudy",
       "kadencje": {
         "2024-2029": {
           "club": "KO",
-          "has_voting_data": false,
-          "has_activity_data": false
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 100.0,
+          "aktywnosc": 99.5,
+          "zgodnosc_z_klubem": 99.2,
+          "votes_za": 735,
+          "votes_przeciw": 124,
+          "votes_wstrzymal": 4,
+          "votes_brak": 1,
+          "votes_nieobecny": 4,
+          "votes_total": 868,
+          "rebellion_count": 7,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_014_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-06-11_015_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-06-11_016_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-10-15_029_000",
+              "session": "2024-10-15",
+              "topic": "IX sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-04_020_000",
+              "session": "2025-11-04",
+              "topic": "XXVI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-18_006_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Wojciech Kręglewski",
+      "slug": "wojciech-kreglewski",
+      "kadencje": {
+        "2024-2029": {
+          "club": "PiS",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 100.0,
+          "aktywnosc": 98.3,
+          "zgodnosc_z_klubem": 98.7,
+          "votes_za": 706,
+          "votes_przeciw": 121,
+          "votes_wstrzymal": 7,
+          "votes_brak": 19,
+          "votes_nieobecny": 15,
+          "votes_total": 868,
+          "rebellion_count": 11,
+          "rebellions": [
+            {
+              "vote_id": "2024-06-11_014_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_015_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "wstrzymal_sie"
+            },
+            {
+              "vote_id": "2024-09-24_044_000",
+              "session": "2024-09-24",
+              "topic": "VIII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-01-17_014_000",
+              "session": "2025-01-17",
+              "topic": "XIV sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-04-29_017_000",
+              "session": "2025-04-29",
+              "topic": "XVIII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-04-29_018_000",
+              "session": "2025-04-29",
+              "topic": "XVIII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-04-29_030_000",
+              "session": "2025-04-29",
+              "topic": "XVIII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-04_019_000",
+              "session": "2025-11-04",
+              "topic": "XXVI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-18_006_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2025-12-18_017_000",
+              "session": "2025-12-18",
+              "topic": "XXIX sesja budżetowa Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2026-02-10_035_000",
+              "session": "2026-02-10",
+              "topic": "XXXI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Zbigniew Czerwiński",
+      "slug": "zbigniew-czerwinski",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 93.1,
+          "aktywnosc": 91.8,
+          "zgodnosc_z_klubem": 59.3,
+          "votes_za": 560,
+          "votes_przeciw": 60,
+          "votes_wstrzymal": 141,
+          "votes_brak": 36,
+          "votes_nieobecny": 71,
+          "votes_total": 868,
+          "rebellion_count": 310,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_004_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_012_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_013_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_016_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-05-28_017_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_000_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_001_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_002_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_004_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_006_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-25_007_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_007_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_021_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_022_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_024_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_025_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_026_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-07-09_027_000",
+              "session": "2024-07-09",
+              "topic": "VI sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-09-03_001_000",
+              "session": "2024-09-03",
+              "topic": "VII sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Zuzanna Bartel",
+      "slug": "zuzanna-bartel",
+      "kadencje": {
+        "2024-2029": {
+          "club": "KO",
+          "has_voting_data": true,
+          "has_activity_data": false,
+          "frekwencja": 100.0,
+          "aktywnosc": 97.8,
+          "zgodnosc_z_klubem": 99.5,
+          "votes_za": 716,
+          "votes_przeciw": 124,
+          "votes_wstrzymal": 4,
+          "votes_brak": 5,
+          "votes_nieobecny": 19,
+          "votes_total": 868,
+          "rebellion_count": 4,
+          "rebellions": [
+            {
+              "vote_id": "2024-06-11_034_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-12-03_017_000",
+              "session": "2024-12-03",
+              "topic": "XII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-04_020_000",
+              "session": "2025-11-04",
+              "topic": "XXVI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2026-01-20_028_000",
+              "session": "2026-01-20",
+              "topic": "XXX sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            }
+          ]
         }
       }
     },

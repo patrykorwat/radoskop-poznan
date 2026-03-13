@@ -1,16 +1,16 @@
 {
-  "generated": "2026-03-12T11:36:10.650006",
+  "generated": "2026-03-13T10:31:58.380803",
   "default_kadencja": "2024-2029",
   "kadencje": [
     {
       "id": "2024-2029",
       "label": "IX kadencja (2024–2029)",
       "clubs": {
-        "?": 3,
         "KO": 18,
         "Lewica": 4,
         "PiS": 6,
-        "TD": 3
+        "TD": 3,
+        "niezrzeszony": 3
       },
       "sessions": [
         {
@@ -3186,19 +3186,27 @@
         },
         {
           "name": "Małgorzata Woźniak",
-          "club": "?",
+          "club": "niezrzeszony",
           "district": null,
           "frekwencja": 96.6,
           "aktywnosc": 91.9,
-          "zgodnosc_z_klubem": 0,
+          "zgodnosc_z_klubem": 99.9,
           "votes_za": 645,
           "votes_przeciw": 125,
           "votes_wstrzymal": 1,
           "votes_brak": 27,
           "votes_nieobecny": 70,
           "votes_total": 868,
-          "rebellion_count": 0,
-          "rebellions": [],
+          "rebellion_count": 1,
+          "rebellions": [
+            {
+              "vote_id": "2024-06-25_006_000",
+              "session": "2024-06-25",
+              "topic": "IV sesja absolutoryjna Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ],
           "has_activity_data": false,
           "activity": null
         },
@@ -3913,37 +3921,116 @@
         },
         {
           "name": "Tomasz Stachowiak",
-          "club": "?",
+          "club": "niezrzeszony",
           "district": null,
           "frekwencja": 93.1,
           "aktywnosc": 81.3,
-          "zgodnosc_z_klubem": 0,
+          "zgodnosc_z_klubem": 99.1,
           "votes_za": 563,
           "votes_przeciw": 116,
           "votes_wstrzymal": 4,
           "votes_brak": 23,
           "votes_nieobecny": 162,
           "votes_total": 868,
-          "rebellion_count": 0,
-          "rebellions": [],
+          "rebellion_count": 6,
+          "rebellions": [
+            {
+              "vote_id": "2024-09-03_001_000",
+              "session": "2024-09-03",
+              "topic": "VII sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2025-01-17_014_000",
+              "session": "2025-01-17",
+              "topic": "XIV sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-09-02_017_000",
+              "session": "2025-09-02",
+              "topic": "XXIII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-18_006_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "za",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2025-11-18_015_000",
+              "session": "2025-11-18",
+              "topic": "XXVII sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2026-02-10_019_000",
+              "session": "2026-02-10",
+              "topic": "XXXI sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            }
+          ],
           "has_activity_data": false,
           "activity": null
         },
         {
           "name": "Tomasz Wierzbicki",
-          "club": "?",
+          "club": "niezrzeszony",
           "district": null,
           "frekwencja": 93.1,
           "aktywnosc": 92.1,
-          "zgodnosc_z_klubem": 0,
+          "zgodnosc_z_klubem": 99.4,
           "votes_za": 665,
           "votes_przeciw": 124,
           "votes_wstrzymal": 4,
           "votes_brak": 6,
           "votes_nieobecny": 69,
           "votes_total": 868,
-          "rebellion_count": 0,
-          "rebellions": [],
+          "rebellion_count": 5,
+          "rebellions": [
+            {
+              "vote_id": "2024-05-28_003_000",
+              "session": "2024-05-28",
+              "topic": "II sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-06-11_015_000",
+              "session": "2024-06-11",
+              "topic": "III sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "przeciw"
+            },
+            {
+              "vote_id": "2024-10-15_018_000",
+              "session": "2024-10-15",
+              "topic": "IX sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2024-10-15_029_000",
+              "session": "2024-10-15",
+              "topic": "IX sesja Rady Miasta Poznania",
+              "their_vote": "wstrzymal_sie",
+              "club_majority": "za"
+            },
+            {
+              "vote_id": "2025-11-04_020_000",
+              "session": "2025-11-04",
+              "topic": "XXVI sesja Rady Miasta Poznania",
+              "their_vote": "przeciw",
+              "club_majority": "za"
+            }
+          ],
           "has_activity_data": false,
           "activity": null
         },
@@ -56510,7 +56597,7 @@
         {
           "a": "Małgorzata Woźniak",
           "b": "Monika Danelska",
-          "club_a": "?",
+          "club_a": "niezrzeszony",
           "club_b": "KO",
           "score": 99.7,
           "common_votes": 732
@@ -56518,7 +56605,7 @@
         {
           "a": "Tomasz Wierzbicki",
           "b": "Wojciech Chudy",
-          "club_a": "?",
+          "club_a": "niezrzeszony",
           "club_b": "KO",
           "score": 99.7,
           "common_votes": 790
@@ -56567,7 +56654,7 @@
           "a": "Marek Sternalski",
           "b": "Małgorzata Woźniak",
           "club_a": "KO",
-          "club_b": "?",
+          "club_b": "niezrzeszony",
           "score": 99.6,
           "common_votes": 761
         },
@@ -56591,7 +56678,7 @@
           "a": "Bartłomiej Ignaszewski",
           "b": "Tomasz Wierzbicki",
           "club_a": "PiS",
-          "club_b": "?",
+          "club_b": "niezrzeszony",
           "score": 99.5,
           "common_votes": 758
         },
@@ -56617,7 +56704,7 @@
           "a": "Przemysław Alexandrowicz",
           "b": "Tomasz Stachowiak",
           "club_a": "KO",
-          "club_b": "?",
+          "club_b": "niezrzeszony",
           "score": 50.6,
           "common_votes": 603
         },
@@ -56649,7 +56736,7 @@
           "a": "Ewa Jemielity",
           "b": "Tomasz Stachowiak",
           "club_a": "KO",
-          "club_b": "?",
+          "club_b": "niezrzeszony",
           "score": 53.1,
           "common_votes": 580
         },
@@ -56657,7 +56744,7 @@
           "a": "Przemysław Alexandrowicz",
           "b": "Tomasz Wierzbicki",
           "club_a": "KO",
-          "club_b": "?",
+          "club_b": "niezrzeszony",
           "score": 53.3,
           "common_votes": 661
         },
@@ -56672,7 +56759,7 @@
         {
           "a": "Małgorzata Woźniak",
           "b": "Przemysław Alexandrowicz",
-          "club_a": "?",
+          "club_a": "niezrzeszony",
           "club_b": "KO",
           "score": 53.5,
           "common_votes": 666
@@ -56705,7 +56792,7 @@
           "a": "Sara Szynkowska vel Sęk",
           "b": "Tomasz Stachowiak",
           "club_a": "PiS",
-          "club_b": "?",
+          "club_b": "niezrzeszony",
           "score": 53.8,
           "common_votes": 571
         },
@@ -56760,7 +56847,7 @@
         {
           "a": "Tomasz Stachowiak",
           "b": "Zbigniew Czerwiński",
-          "club_a": "?",
+          "club_a": "niezrzeszony",
           "club_b": "KO",
           "score": 54.2,
           "common_votes": 601

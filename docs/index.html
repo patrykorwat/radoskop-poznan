@@ -1119,16 +1119,17 @@ function showProfile(name) {
       showInterpItems.forEach(item => {
         const all = window.INTERPELACJE || [];
         const idx = all.indexOf(item);
-        const cat = item.kategoria || 'inne';
+        const cat = categorizeInterpelacja(item.przedmiot);
         const typBadge = item.typ === 'zapytanie'
-          ? '<span style="background:rgba(37,99,235,0.12);color:#2563eb;padding:1px 5px;border-radius:3px;font-size:0.7rem;font-weight:600">Z</span>'
+          ? '<span style="background:rgba(37,99,235,0.12);color:var(--blue);padding:1px 5px;border-radius:3px;font-size:0.7rem;font-weight:600">Z</span>'
           : '<span style="background:rgba(79,70,229,0.12);color:var(--accent);padding:1px 5px;border-radius:3px;font-size:0.7rem;font-weight:600">I</span>';
         html += `<div class="uchwala-row interp-row" data-icat="${cat}" onclick="showInterpelacja(${idx})" style="cursor:pointer;padding:8px 12px">
           <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
             ${typBadge}
             ${interpCatPill(cat)}
-            <span style="font-size:0.75rem;color:var(--muted)">${item.data_wplywu}</span>
-            ${interpHasAnswer(item) ? '<span style="color:#16a34a;font-size:0.7rem">&#10003;</span>' : ''}
+            <span class="uchwala-numer" style="font-size:0.8rem">${item.cri || ''}</span>
+            <span style="font-size:0.75rem;color:var(--muted)">${item.data_wplywu || ''}</span>
+            ${interpHasAnswer(item) ? '<span style="color:var(--green);font-size:0.7rem">&#10003;</span>' : ''}
           </div>
           <div style="font-size:0.85rem">${item.przedmiot || ''}</div>
         </div>`;

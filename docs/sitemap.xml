@@ -6,32 +6,22 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/adam-szabelak/</loc>
+    <loc>https://poznan.radoskop.pl/profil/adam-szabelski/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/agnieszka-lewandowska/</loc>
+    <loc>https://poznan.radoskop.pl/profil/andrzej-prendke/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/arkadiusz-marchewka/</loc>
+    <loc>https://poznan.radoskop.pl/profil/andrzej-rataj/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/bartosz-zawieja/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://poznan.radoskop.pl/profil/beata-urbanska/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://poznan.radoskop.pl/profil/dominika-gorna/</loc>
+    <loc>https://poznan.radoskop.pl/profil/bartlomiej-ignaszewski/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -46,12 +36,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/filip-olszak/</loc>
+    <loc>https://poznan.radoskop.pl/profil/grzegorz-ganowicz/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/grzegorz-ganowicz/</loc>
+    <loc>https://poznan.radoskop.pl/profil/grzegorz-jura/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -61,22 +51,27 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/joanna-jaskowiak/</loc>
+    <loc>https://poznan.radoskop.pl/profil/justyna-kuberka/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/jedrzej-solarski/</loc>
+    <loc>https://poznan.radoskop.pl/profil/katarzyna-pampuch/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/lidia-dudziak/</loc>
+    <loc>https://poznan.radoskop.pl/profil/klaudia-strzelecka/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/maciej-wituski/</loc>
+    <loc>https://poznan.radoskop.pl/profil/magdalena-antolczyk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/marcin-ruta/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -86,32 +81,37 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/marek-wozniak/</loc>
+    <loc>https://poznan.radoskop.pl/profil/maria-lisiecka-pawelczak/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/mariusz-wisniewski/</loc>
+    <loc>https://poznan.radoskop.pl/profil/marta-mazurek/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/marzena-wodzinska/</loc>
+    <loc>https://poznan.radoskop.pl/profil/mateusz-rozmiarek/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/mikolaj-wilk/</loc>
+    <loc>https://poznan.radoskop.pl/profil/malgorzata-dudzic-biskupska/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/natalia-konfederak/</loc>
+    <loc>https://poznan.radoskop.pl/profil/malgorzata-wozniak/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/pawel-sowa/</loc>
+    <loc>https://poznan.radoskop.pl/profil/monika-danelska/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/pawel-matuszak/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -121,22 +121,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/rafal-grupinski/</loc>
+    <loc>https://poznan.radoskop.pl/profil/przemyslaw-plewinski/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/roger-russel/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://poznan.radoskop.pl/profil/szymon-szynkowski-vel-sek/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://poznan.radoskop.pl/profil/tomasz-kacprzak/</loc>
+    <loc>https://poznan.radoskop.pl/profil/sara-szynkowska-vel-sek/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -146,12 +136,32 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/zdzislaw-szkutnik/</loc>
+    <loc>https://poznan.radoskop.pl/profil/tomasz-stachowiak/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poznan.radoskop.pl/profil/zuzanna-chojnacka/</loc>
+    <loc>https://poznan.radoskop.pl/profil/tomasz-wierzbicki/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/wojciech-chudy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/wojciech-kreglewski/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/zbigniew-czerwinski/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poznan.radoskop.pl/profil/zuzanna-bartel/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

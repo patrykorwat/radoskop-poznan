@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-13T10:31:58.380803",
+  "generated": "2026-03-18T14:04:58.853930",
   "default_kadencja": "2024-2029",
   "kadencje": [
     {
@@ -1235,9 +1235,17 @@
             "Łukasz Mikuła"
           ],
           "speakers": []
+        },
+        {
+          "date": "2026-03-17",
+          "number": "XXXII",
+          "vote_count": 0,
+          "attendee_count": 0,
+          "attendees": [],
+          "speakers": []
         }
       ],
-      "total_sessions": 31,
+      "total_sessions": 32,
       "total_votes": 868,
       "total_councilors": 34,
       "councilors": [
